@@ -4,7 +4,7 @@ import Header from '../Components/Header';
 
 const Main = () => {
     return (
-        <div>
+        <div className="p-4 flex flex-col min-h-screen">
             <Header />
             <Outlet/>
         </div>

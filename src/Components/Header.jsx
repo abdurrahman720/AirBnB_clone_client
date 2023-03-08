@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
         <div>
-            <header className="p-4 flex justify-between">
+            <header className="flex justify-between">
         <a href="" className="logo flex items-center gap-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +62,7 @@ const Header = () => {
               />
             </svg>
           </div>
-          <div>
+          <Link to={'/login'}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -74,7 +75,7 @@ const Header = () => {
                 clipRule="evenodd"
               />
             </svg>
-          </div>
+          </Link>
         </div>
       </header> 
         </div>
