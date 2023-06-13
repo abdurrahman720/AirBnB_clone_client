@@ -4,7 +4,7 @@ import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 const AccountPage = () => {
-    const { user, loading } = useContext(UserContext);
+    const { user,setUser, loading } = useContext(UserContext);
     const navigate = useNavigate()
     let { subpage } = useParams();
     {
@@ -14,10 +14,10 @@ const AccountPage = () => {
     }
 
     const logOut = async() => {
-        const res = await axios.post('/logout');
-        const data = await res.data;
-     
-            navigate('/')
+    await axios.post('/logout');
+      
+        setUser(null)
+        navigate('/')
     
     }
 

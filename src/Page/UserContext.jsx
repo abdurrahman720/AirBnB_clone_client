@@ -21,9 +21,10 @@ const UserContextProvider = ({ children }) => {
         if (!user) {
             fetchdata(); 
         }
+      
     }, [])
     
-    const contextInfo = {user, setUser, loading}
+    const contextInfo = {user, setUser, loading, setLoading}
     return (
         <UserContext.Provider value={contextInfo}>
             {children}
